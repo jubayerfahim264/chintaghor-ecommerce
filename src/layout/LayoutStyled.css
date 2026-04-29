@@ -1,0 +1,26 @@
+.footer{
+    margin: 50px auto;
+    transform: translate(-50px,50px);
+}
+.chintaghor{
+    font-family: "Playfair Display";
+    font-size: 24px;
+}
+.footerCard p{
+    font-size: 14px;
+    font-family: "Hind Siliguri";
+}
+.footerHeadline{
+    color: #C1C1C1;
+    font-size: 12px;
+    font-family: "Inter";
+}
+.footerCard ul{
+    list-style: none;
+    padding-left: 0;
+}
+.footerCard ul li{
+    font-size: 16px;
+    font-family: "Playfair Display";
+    margin: 10px 0;
+}

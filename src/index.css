@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+  --social-bg: rgba(244, 243, 236, 0.5);
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #16171d;
+    --border: #2e303a;
+    --code-bg: #1f2028;
+    --accent: #c084fc;
+    --accent-bg: rgba(192, 132, 252, 0.15);
+    --accent-border: rgba(192, 132, 252, 0.5);
+    --social-bg: rgba(47, 48, 58, 0.5);
+    --shadow:
+      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  }
+
+}
+
+body {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+}
+
+
+h1,
+h2 {
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+.header {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+}
+
+.pdTitle {
+  margin-top: 50px;
+  margin-left: 50px;
+  transform: translate(-50px, 60px);
+}
+
+.pdTitle h2 {
+  font-weight: 400;
+  font-family: "Hind Siliguri";
+  font-size: 40px;
+  line-height: 60px;
+}
+
+.pdTitle p {
+  font-weight: 400;
+  font-family: "Hind Siliguri";
+  font-size: 16px;
+  line-height: 30px;
+  color: #8f8f8f;
+}
+
+.imgDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.imgDiv img {
+  width: 60%;
+  height: 500px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.catagories h4 {
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Playfair Display';
+  font-size: 36px;
+}
+
+/* =================Categories styled============================ */
+.catagoryCard {
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.catagoryCard img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.catagoryCard h3 {
+  text-align: center;
+  margin-top: 15px;
+  font-family: 'Playfair Display';
+  font-size: 20px;
+}
+
+.catagoryCard p {
+  font-size: 14px;
+  text-align: center;
+  font-family: "Inter";
+}
+
+/* =============Featured styled================ */
+.featuredHeadline {
+  font-size: 36px;
+  font-family: "Hind Siliguri";
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 60px;
+}
+
+.featuredCardTitle {
+  font-size: 36px;
+  font-family: "Playfair Display";
+  margin-bottom: 20px;
+}
+
+.featuredCard p {
+  font-size: 14px;
+  font-family: "Hind Siliguri";
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+
+.featuredCard button {
+  background: #ffffff;
+  border-bottom: 1px solid gray;
+  border-radius: 0 0 0 0;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.featuredCard button:hover {
+  background: #f4f3ec;
+  border: 1px solid #f4f3ec;
+}
+
+.featuredCard button a {
+  font-size: 14px;
+  font-family: "Hind Siliguri";
+}
+
+.itemsName {
+  font-size: 16px;
+  font-family: "Inter";
+  margin-top: 20px;
+  color: #838383;
+}
+
+.featuredCard h1 {
+  font-size: 24px;
+  font-family: "Playfair Display";
+  margin-top: 10px;
+  color: #030303;
+}
+
+/* ======================================BlogPost Styled================= */
+.imgDivBx {
+  position: relative;
+  width: 100%;
+}
+
+.imgDivBx img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  position: relative;
+}
+
+p.imgPara {
+  background: #ffffff;
+  width: 150px;
+  height: fit-content;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.write {
+  font-size: 12px;
+  font-family: "Ïnter";
+  color: #C1C1C1;
+}
+
+.writer {
+  font-family: "Playfair Display";
+  font-size: 14px;
+  color: #030303;
+}
+
+.edition {
+  font-size: 12px;
+  font-family: "Inter";
+  color: #C1C1C1;
+  margin-top: 15px;
+}
+
+.blogHeadline {
+  font-family: "Hind Siliguri";
+  font-size: 24px;
+}
+
+@media screen and (max-width:768px) {
+  .imgDiv img {
+    width: 100%;
+    height: 400px;
+  }
+
+  .pdTitle {
+    margin-top: 0px;
+    margin-left: 50px;
+    transform: translate(-30px, 30px);
+  }
+
+  .featuredHeadline {
+    font-size: 24px;
+    font-family: "Playfair Display";
+    margin-bottom: 50px;
+    line-height: 40px;
+    text-align: left;
+  }
+
+  .featuredCard button {
+
+    margin-bottom: 20px;
+  }
+}
+
+/* NewsLetter styled */
+.newsLetter {
+  position: relative;
+}
+
+.newsLetter h4 {
+  font-family: "Playfair Display";
+  font-size: 24px;
+  color: #08060d;
+  max-width: 400px;
+  margin: auto;
+  line-height: 38px;
+}
+
+.inputDiv {
+  position: relative;
+  display: flex;
+  margin: 20px auto;
+  background: #e9ecef;
+  width: 40%;
+}
+
+.inputDiv input {
+  border: none;
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+.inputDiv input:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.inputDiv input::placeholder {
+  font-family: "Playfair Display";
+}
+
+.inputDiv button {
+  border-radius: 0;
+  background: black;
+  color: white;
+  transition: all 0.4s ease-in-out;
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.inputDiv button:hover {
+  background: #353535;
+  color: white;
+}
+
+/* Responsive */
+@media screen and (max-width:768px) {
+  .inputDiv {
+    width: 100%;
+  }
+
+  .footer {
+    margin: 60px auto;
+    transform: translate(0px, 0px);
+  }
+}
