@@ -14,6 +14,14 @@
     padding: 20px;
 }
 
+.sliderImg {
+    border-radius: 0;
+}
+
+.button-prev {
+    background: #b8b8b8;
+}
+
 /* ==================== */
 .blogTitle {
     font-size: 24px;
@@ -32,18 +40,21 @@
     font-family: "Playfair Display";
     line-height: 35px;
 }
-.date{
+
+.date {
     font-size: 14px;
     font-family: "Inter";
     color: #c5c4c4;
     display: flex;
     gap: 10px;
 }
-.desc{
+
+.desc {
     font-size: 14px;
-        font-family: "Inter";
+    font-family: "Inter";
 }
-.lifeStyle-Travel{
+
+.lifeStyle-Travel {
     font-size: 24px;
     font-family: "Playfair Display";
 }

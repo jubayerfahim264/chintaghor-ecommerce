@@ -1,5 +1,3 @@
-import "./Shop.css";
-import SliderPage from "../Blog/Carousel/Carousel";
 import {
   Card,
   CardBody,
@@ -10,9 +8,8 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { ShoppingCart } from "lucide-react";
-import MenuShop from "./MenuShop";
-import Popular from "./Popular";
-const Shop = () => {
+import "./Shop.css"
+const Popular = () => {
   const newArrived = [
     {
       id: "newproducts001ebook",
@@ -53,9 +50,8 @@ const Shop = () => {
   ];
   return (
     <>
-      <SliderPage />
-      <div className="container my-3">
-        <h4 className="NewArrived text-center">New Arrived</h4>
+      <div className="my-5">
+        <h4 className="NewArrived text-center">Popular Products</h4>
         <div className="row">
           {newArrived.map((pd) => (
             <div className="col-md-4 my-2" key={pd.id}>
@@ -85,11 +81,9 @@ const Shop = () => {
             </div>
           ))}
         </div>
-        <MenuShop />
-        <Popular />
       </div>
     </>
   );
 };
 
-export default Shop;
+export default Popular;

@@ -1,26 +1,38 @@
-.footer{
+.footer {
     margin: 50px auto;
-    transform: translate(-50px,50px);
+    transform: translate(-50px, 50px);
 }
-.chintaghor{
+
+.chintaghor {
     font-family: "Playfair Display";
     font-size: 24px;
 }
-.footerCard p{
+
+.footerCard p {
     font-size: 14px;
     font-family: "Hind Siliguri";
 }
-.footerHeadline{
+
+.footerHeadline {
     color: #C1C1C1;
     font-size: 12px;
     font-family: "Inter";
 }
-.footerCard ul{
+
+.footerCard ul {
     list-style: none;
     padding-left: 0;
 }
-.footerCard ul li{
+
+.footerCard ul li {
     font-size: 16px;
     font-family: "Playfair Display";
     margin: 10px 0;
+}
+
+@media screen and (max-width:768px) {
+    .footer {
+        margin: 50px auto;
+        transform: translate(0, 0px);
+    }
 }

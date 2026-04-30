@@ -13,23 +13,23 @@ import BlogDeatails from "./Pages/Blog/BlogDeatails/BlogDeatails";
 
 const router = createBrowserRouter([
   {
-    path: "catalogue",
+    path: "/catalogue",
     element: <CataloguePage />,
     errorElement: <NotFound />,
   },
   {
-    path: "bundle",
+    path: "/bundle",
     element: <BundlePage />,
     errorElement: <NotFound />,
   },
   {
-    path: "contact",
+    path: "/contact",
     element: <ContactPage />,
     errorElement: <NotFound />,
   },
 
   {
-    path: "shop",
+    path: "/shop",
     element: <Shop />,
     errorElement: <NotFound />,
   },
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
   },
   {
-    path: "sign-in",
+    path: "/sign-in",
     element: <div>Sign In Page</div>,
     errorElement: <NotFound />,
   },

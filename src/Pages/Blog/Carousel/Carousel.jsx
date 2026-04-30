@@ -54,12 +54,12 @@ export default function BlogCarousel() {
         className="h-full w-full">
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <div className="relative w-full h-full">
+            <div className="relative w-full h-full rounded-0">
               {/* Image with Overlay */}
               <img
                 src={slide.image}
                 alt={slide.title}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-2000 scale-105 group-hover:scale-100 rounded-0"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-2000 scale-105 group-hover:scale-100 sliderImg"
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
 
