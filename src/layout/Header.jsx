@@ -4,15 +4,8 @@ import {
   DialogPanel,
   PopoverGroup,
 } from "@headlessui/react";
-import {
-  Bars3Icon,
-
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
-
-import { Button } from "@chakra-ui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Outlet } from "react-router";
-
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -64,6 +57,11 @@ export default function Header() {
             Catalogue
           </a>
           <a
+            href="/blog"
+            className="text-[16px] font-normal leading-6 text-zinc-600 hover:text-zinc-950 transition-colors">
+            Blog
+          </a>
+          <a
             href="/contact"
             className="text-[16px] font-normal leading-6 text-zinc-600 hover:text-zinc-950 transition-colors">
             Contact
@@ -77,13 +75,6 @@ export default function Header() {
             className="text-[18px] font-normal text-zinc-600 hover:text-zinc-950 transition-colors">
             Sign in
           </a>
-          <Button className="rounded-full">
-            <a
-              href="/sign-up"
-              className="rounded-full  px-4 py-1.5 text-[18px] font-normal">
-              Start Free Trial
-            </a>
-          </Button>
         </div>
       </nav>
 
@@ -96,7 +87,7 @@ export default function Header() {
         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm border-l border-zinc-100 shadow-xl">
           <div className="flex items-center justify-between">
             <span className="text-[15px] font-normal tracking-tight">
-              Nexus
+              ChintaGhor
             </span>
             <button
               type="button"
@@ -124,6 +115,11 @@ export default function Header() {
                   Catalogue
                 </a>
                 <a
+                  href="/blog"
+                  className="text-[16px] font-normal leading-6 text-zinc-600 hover:text-zinc-950 transition-colors">
+                  Blog
+                </a>
+                <a
                   href="/contact"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-[14px] font-normal text-zinc-900 hover:bg-zinc-50">
                   Contact
@@ -134,11 +130,6 @@ export default function Header() {
                   href="/sign-in"
                   className="block text-center rounded-full border border-zinc-200 py-2 text-[14px] font-normal text-zinc-900">
                   Sign in
-                </a>
-                <a
-                  href="/sign-up"
-                  className="block text-center rounded-full py-2 text-[16px] font-normal">
-                  Start Free Trial
                 </a>
               </div>
             </div>

@@ -1,6 +1,6 @@
 import { Button } from "@chakra-ui/react";
-import Categories from "./Categories";
-import Featured from "./Featured";
+import Categories from "../Categories/Categories";
+import Featured from "../Featured/Featured";
 import { Link } from "react-router";
 
 const Home = () => {

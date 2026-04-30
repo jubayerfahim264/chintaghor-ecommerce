@@ -77,7 +77,7 @@ const Featured = () => {
         </div>
       </div>
       {/* ================== */}
-      <div className="row my-5">
+      <div className="row my-5 border-bottom">
         {blogPost.map((blog, index) => (
           <div className="col-md-6 my-3" key={index}>
             <div className="blogCard">
@@ -89,13 +89,15 @@ const Featured = () => {
                 </p>
               </div>
               <p className="edition">{blog.editiion}</p>
-              <h3 className="blogHeadline">
-                <Link to="/blog">{blog.title}</Link>
-              </h3>
+              <h3 className="blogHeadline">{blog.title}</h3>
             </div>
           </div>
         ))}
+        <Button className="blogBtn">
+          <Link to="/blog">Read more</Link>
+        </Button>
       </div>
+
       {/* =================== */}
       <div className="newsLetter my-3">
         <h4>Get 15% off your next order, Subscribe to our Newsletter</h4>

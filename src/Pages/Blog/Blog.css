@@ -1,0 +1,49 @@
+.contentContainer {
+    font-size: 24px;
+    font-family: "Playfair Display";
+}
+
+.caraouselBtn {
+    font-family: "Inter";
+    font-size: 14px;
+}
+
+.contentContainer span {
+    font-family: "Inter";
+    font-size: 10px;
+    padding: 20px;
+}
+
+/* ==================== */
+.blogTitle {
+    font-size: 24px;
+    font-family: "Playfair Display";
+}
+
+.tag {
+    margin: 20px 0;
+    color: #b8b8b8;
+    font-family: "Inter";
+    font-size: 14px;
+}
+
+.title {
+    font-size: 20px;
+    font-family: "Playfair Display";
+    line-height: 35px;
+}
+.date{
+    font-size: 14px;
+    font-family: "Inter";
+    color: #c5c4c4;
+    display: flex;
+    gap: 10px;
+}
+.desc{
+    font-size: 14px;
+        font-family: "Inter";
+}
+.lifeStyle-Travel{
+    font-size: 24px;
+    font-family: "Playfair Display";
+}
