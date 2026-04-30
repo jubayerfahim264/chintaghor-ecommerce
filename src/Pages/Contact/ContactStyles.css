@@ -96,6 +96,71 @@
         transform: translateY(0);
     }
 }
+.contactIconCard {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.iconBx {
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    background: #0188ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+    color: #fff;
+}
+
+.contactIconCard h4 {
+    font-size: 20px;
+    font-family: "Playfair Display";
+}
+
+.contactIconCard p {
+    color: #717578;
+    font-size: 17px;
+    font-family: "Inter";
+}
+
+.contactInput {
+    background: #F7F8FA;
+    padding: 50px;
+    text-align: center;
+}
+
+.contactInput h2 {
+    margin: 30px 0;
+    text-transform: capitalize;
+    font-size: 42px;
+    font-family: "Playfair Display";
+}
+
+.contactInput input {
+    margin: 30px 0;
+    background-color: #FFFFFF;
+    border-radius: 0;
+    padding: 20px !important;
+}
+
+.contactInput textarea {
+    background-color: #FFFFFF;
+    border: none;
+    outline: none;
+    border-radius: 0;
+}
+
+.contactBtn {
+    width: 250px;
+    padding: 20px;
+    border-radius: 0;
+    margin: 15px 0;
+    background: #0188ff;
+    color: #F7F8FA;
+}
 
 /* Responsive */
 @media (max-width: 768px) {

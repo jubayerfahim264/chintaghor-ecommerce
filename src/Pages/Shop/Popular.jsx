@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { ShoppingCart } from "lucide-react";
 import "./Shop.css"
-const Popular = () => {
+const Popular = (props) => {
   const newArrived = [
     {
       id: "newproducts001ebook",
@@ -73,7 +73,10 @@ const Popular = () => {
                     </Text>
                   </Stack>
 
-                  <Button rightIcon={<ShoppingCart />} className="shopBtn">
+                  <Button
+                    rightIcon={<ShoppingCart />}
+                    className="shopBtn"
+                    onClick={() => props.handleAddCart(pd)}>
                     Add to Cart
                   </Button>
                 </CardBody>

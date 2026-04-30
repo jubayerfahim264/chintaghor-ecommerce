@@ -12,7 +12,8 @@ import {
 import { ShoppingCart } from "lucide-react";
 import MenuShop from "./MenuShop";
 import Popular from "./Popular";
-const Shop = () => {
+
+const Shop = (props) => {
   const newArrived = [
     {
       id: "newproducts001ebook",
@@ -51,6 +52,8 @@ const Shop = () => {
       price: 700,
     },
   ];
+  // ==========================================================//
+
   return (
     <>
       <SliderPage />
@@ -77,7 +80,10 @@ const Shop = () => {
                     </Text>
                   </Stack>
 
-                  <Button rightIcon={<ShoppingCart />} className="shopBtn">
+                  <Button
+                    rightIcon={<ShoppingCart />}
+                    className="shopBtn"
+                    onClick={() => props.handleAddCart(pd)}>
                     Add to Cart
                   </Button>
                 </CardBody>
@@ -86,7 +92,7 @@ const Shop = () => {
           ))}
         </div>
         <MenuShop />
-        <Popular />
+        <Popular handleAddCart={props.handleAddCart} />
       </div>
     </>
   );

@@ -1,13 +1,10 @@
 import { useState } from "react";
-import {
-  Dialog,
-  DialogPanel,
-  PopoverGroup,
-} from "@headlessui/react";
+import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Outlet } from "react-router";
+import { ShoppingCart } from "lucide-react";
 
-export default function Header() {
+export default function Header(props) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -70,6 +67,10 @@ export default function Header() {
 
         {/* Right side CTA */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-x-5">
+          <a href="/cart" className="flex">
+            <ShoppingCart />
+            <sub className="ms-2">{props.addToCart}</sub>
+          </a>
           <a
             href="/sign-in"
             className="text-[18px] font-normal text-zinc-600 hover:text-zinc-950 transition-colors">
@@ -126,6 +127,10 @@ export default function Header() {
                 </a>
               </div>
               <div className="py-6 space-y-3">
+                <a href="/cart" className="flex">
+                  <ShoppingCart />
+                  <sub className="ms-2">{props.addToCart}</sub>
+                </a>
                 <a
                   href="/sign-in"
                   className="block text-center rounded-full border border-zinc-200 py-2 text-[14px] font-normal text-zinc-900">
