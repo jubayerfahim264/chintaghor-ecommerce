@@ -1,114 +1,100 @@
-import "./Shop.css";
+/* eslint-disable react-hooks/set-state-in-effect */
+import { useState, useEffect } from "react";
+import "./cart.css";
+import CartItem from "./CartItem";
+import CartSummary from "./CartSummary";
 import {
+  Box,
+  SkeletonCircle,
+  SkeletonText,
   Table,
   TableContainer,
   Tbody,
   Th,
-  Td,
   Thead,
   Tr,
-  NumberInput,
-  NumberInputField,
-  NumberInputStepper,
-  NumberIncrementStepper,
-  NumberDecrementStepper,
-  Button,
-  Input,
-  Stack,
 } from "@chakra-ui/react";
 import { Link } from "react-router";
-const Cart = (props) => {
-  const AddedCart = props.addToCart;
-  console.log(AddedCart);
 
+const Cart = (props) => {
+  const { addToCart, handleRemove } = props;
+  const [cart, setCart] = useState([]);
+
+  //Handle Updating Quantity
+  const handleQty = (id, delta) => {
+    setCart((prev) =>
+      prev.map((item) =>
+        item.id === id ? { ...item, qty: Math.max(1, item.qty + delta) } : item,
+      ),
+    );
+  };
+
+  // Sync cart state with parent addToCart prop
+  useEffect(() => {
+    setCart(addToCart);
+  }, [addToCart]);
+  // Cart Summery Data
+  const subTotal = cart.reduce((s, i) => s + i.price * i.qty, 0);
+
+  const total = subTotal;
+  // ==========================================================//
   return (
     <>
-      <div className="container my-5">
-        <TableContainer className="border rounded">
-          <Table variant="simple">
-            <Thead>
-              <Tr>
-                <Th>products</Th>
-                <Th>price</Th>
-                <Th>quantity</Th>
-                <Th>SubTotal</Th>
-              </Tr>
-            </Thead>
-            {AddedCart.map((cart) => (
-              <Tbody key={cart.id}>
-                <Tr>
-                  <Td>
-                    <img
-                      src={cart.img}
-                      alt=""
-                      style={{ height: 60, width: 60 }}
-                    />
-                  </Td>
-                  <Td>{cart.title}</Td>
-                  <Td>
-                    <NumberInput size="sm" maxW={32} defaultValue={0}>
-                      <NumberInputField />
-                      <NumberInputStepper>
-                        <NumberIncrementStepper />
-                        <NumberDecrementStepper />
-                      </NumberInputStepper>
-                    </NumberInput>
-                  </Td>
-                  <Td>${cart.price}</Td>
-                </Tr>
-              </Tbody>
-            ))}
-          </Table>
-        </TableContainer>
-
-        <div className="row">
-          <div className="col-md-6">
-            <Link to="/shop">
-              <Button colorScheme="teal" variant="outline" className="mt-3">
-                Return to Shop
-              </Button>
-            </Link>
+      <div className="checkout-wrapper">
+        <div className="container ">
+          <div className="checkout-container">
+            <h1 className="cart-header">
+              Your Cart <span>({cart.length} items)</span>
+            </h1>
+            <div className="checkout-grid">
+            {cart.length === 0 ? (
+              <>
+                <Box padding="6" boxShadow="lg" bg="white">
+                  <SkeletonCircle size="10" />
+                  <SkeletonText
+                    mt="4"
+                    noOfLines={4}
+                    spacing="4"
+                    skeletonHeight="2"
+                  />
+                </Box>
+              </>
+            ) : (
+              <>
+                <TableContainer className="cart-table-container">
+                  <Table variant="simple" className="cart-table">
+                    <Thead className="cart-table-head">
+                      <Tr className="cart-header-row">
+                        <Th className="cart-th">Image</Th>
+                        <Th className="cart-th">Product</Th>
+                        <Th className="cart-th">Quantity</Th>
+                        <Th className="cart-th">Price</Th>
+                        <Th className="cart-th">Action</Th>
+                      </Tr>
+                    </Thead>
+                    <Tbody className="cart-table-body">
+                      {cart.map((item) => (
+                        <CartItem
+                          key={item.id}
+                          item={item}
+                          handleQty={handleQty}
+                          handleRemove={handleRemove}
+                        />
+                      ))}
+                    </Tbody>
+                  </Table>
+                </TableContainer>
+              </>
+            )}
+            <div className="checkout-sidebar">
+              <CartSummary subTotal={subTotal} total={total}>
+                <Link to="/checkout">
+                  <button className="checkout-btn">Proceed to Checkout</button>
+                </Link>
+              </CartSummary>
+              </div>
+              </div>
           </div>
-          <div className="col-md-6 my-3">
-            <Stack gap={0} direction={"row"}>
-              <Input placeholder="Cuopon Code" rounded={0} />
-              <Button rounded={0} bgColor={"orange.400"} paddingX={10}>
-                Apply Coupon
-              </Button>
-            </Stack>
-          </div>
-        </div>
-        <div className="cartTotal col-md-5">
-          <h4
-            style={{
-              fontFamily: "Playfair Display",
-            }}>
-            Cart Total
-          </h4>
-          <ul>
-            <li>
-              <span>Product Price</span>
-              <span>450</span>
-            </li>
-            <li>
-              <span>Total</span>
-              <span>450</span>
-            </li>
-          </ul>
-          <Link>
-            <Button
-              rounded={0}
-              colorScheme="teal"
-              paddingX={10}
-              style={{
-                display: "flex",
-                margin: "auto",
-                fontFamily: "Playfair Display",
-                fontSize: 18,
-              }}>
-              Procces to Checkout
-            </Button>
-          </Link>
         </div>
       </div>
     </>

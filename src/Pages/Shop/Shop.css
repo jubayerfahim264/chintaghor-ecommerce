@@ -85,23 +85,3 @@
         line-height: 40px;
     }
 }
-.cartTotal {
-    border: 1px solid #bdbdbd;
-    padding: 30px;
-    border-radius: 10px;
-    margin: 20px auto;
-}
-
-.cartTotal ul {
-    padding-left: 0;
-}
-
-.cartTotal ul li {
-    border-bottom: 1px solid lightgray;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-family: "Inter";
-    font-size: 14px;
-}

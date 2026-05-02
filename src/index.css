@@ -268,6 +268,7 @@ p.imgPara {
   font-family: "Hind Siliguri";
   font-size: 24px;
 }
+
 button.chakra-button.blogBtn.css-ez23ye {
   width: 150px;
   height: 50px;
@@ -282,6 +283,7 @@ button.chakra-button.blogBtn.css-ez23ye {
   justify-content: center;
   font-family: "Inter";
 }
+
 @media screen and (max-width:768px) {
   .imgDiv img {
     width: 100%;
@@ -363,6 +365,39 @@ button.chakra-button.blogBtn.css-ez23ye {
   color: white;
 }
 
+.productsDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #e5e4e7;
+  max-width: 450px;
+  margin: 10px auto;
+}
+
+.imgContent {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+}
+
+.CheckOutTitle {
+  font-size: 14px;
+  font-family: "Playfair Display";
+}
+
+.checkOutHeadline {
+  font-size: 36px;
+  font-family: "Hind Siliguri";
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 60px;
+}
 /* Responsive */
 @media screen and (max-width:768px) {
   .inputDiv {

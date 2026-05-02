@@ -12,6 +12,8 @@ import Blog from "./Pages/Blog/Blog";
 import BlogDeatails from "./Pages/Blog/BlogDeatails/BlogDeatails";
 import Cart from "./Pages/Shop/Cart";
 import { useEffect, useState } from "react";
+import Checkout from "./Pages/Shop/Checkout";
+// import ModalComponent from "./Pages/Shop/Modal";
 
 function App() {
   const [addToCart, setAddToCart] = useState(() => {
@@ -19,10 +21,23 @@ function App() {
     return saved ? JSON.parse(saved) : [];
   });
   const handleAddCart = (cartAdded) => {
-    const exits = addToCart.find((pd) => pd.id === cartAdded.id);
-    if (!exits) {
-      setAddToCart((prev) => [...prev, cartAdded]);
+    // Check if the item is already in the cart
+    const existingItem = addToCart.find((item) => item.id === cartAdded.id);
+    if (existingItem) {
+      // If it exists, update the quantity
+      setAddToCart((prev) =>
+        prev.map((item) =>
+          item.id === cartAdded.id ? { ...item, qty: item.qty + 1 } : item,
+        ),
+      );
+    } else {
+      // If it doesn't exist, add it to the cart with qty: 1
+      setAddToCart((prev) => [...prev, { ...cartAdded, qty: 1 }]);
     }
+  };;
+
+  const handleRemove = (id) => {
+    setAddToCart((prev) => prev.filter((item) => item.id !== id));
   };
 
   const router = createBrowserRouter([
@@ -64,9 +79,19 @@ function App() {
     },
     {
       path: "/cart",
-      element: <Cart addToCart={addToCart} />,
+      element: <Cart addToCart={addToCart} handleRemove={handleRemove} />,
       errorElement: <NotFound />,
     },
+    {
+      path: "/checkout",
+      element: <Checkout addToCart={addToCart} handleRemove={handleRemove} />,
+      errorElement: <NotFound />,
+    },
+    // {
+    //   path: "/modal",
+    //   element: <ModalComponent />,
+    //   errorElement: <NotFound />,
+    // },
     {
       path: "/",
       element: <Home />,

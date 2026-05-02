@@ -1,0 +1,443 @@
+/* ============ CHECKOUT PAGE STYLES ============ */
+
+.checkout-wrapper {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.checkout-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.checkout-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.checkout-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #DB4444 0%, #c41f1f 100%);
+    color: white;
+    border-radius: 12px;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 15px rgba(219, 68, 68, 0.2);
+}
+
+.checkout-title {
+    font-family: "Playfair Display", serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 10px 0;
+}
+
+.checkout-subtitle {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+}
+
+/* Grid Layout */
+.checkout-grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 30px;
+}
+
+/* Products Section */
+.checkout-products {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.products-header {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.products-title {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+}
+
+.products-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.product-item {
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+    align-items: center;
+    position: relative;
+}
+
+.product-item:hover {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border-color: #DB4444;
+}
+
+.product-image {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: white;
+}
+
+.qty-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 28px;
+    height: 28px;
+    background: #DB4444;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.product-details {
+    flex: 1;
+}
+
+.product-name {
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0 0 8px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-info {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 8px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+
+.product-price {
+    color: #DB4444;
+    font-weight: 600;
+}
+
+.product-qty {
+    color: #999;
+    font-size: 13px;
+}
+
+.product-total {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #666;
+}
+
+.product-total strong {
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+.remove-item-btn {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e9ecef;
+    background: white;
+    color: #DB4444;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.remove-item-btn:hover {
+    background: #DB4444;
+    color: white;
+    border-color: #DB4444;
+    transform: scale(1.05);
+}
+
+/* Sidebar */
+.checkout-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.checkout-section {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0 0 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.section-title svg {
+    color: #DB4444;
+}
+
+/* Payment Dropdown */
+.checkout-section select,
+.checkout-section [role="combobox"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e9ecef !important;
+    border-radius: 6px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #1a1a1a !important;
+    background: white !important;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.checkout-section select:hover,
+.checkout-section select:focus,
+.checkout-section [role="combobox"]:hover,
+.checkout-section [role="combobox"]:focus {
+    border-color: #DB4444 !important;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(219, 68, 68, 0.1);
+}
+
+/* Summary Card in Sidebar */
+.checkout-section.summary-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border: 2px solid #e9ecef;
+}
+
+.summary-card .summary-title {
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.summary-card .summary-row {
+    padding: 10px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.summary-card .summary-row:last-child {
+    border-bottom: none;
+}
+
+.summary-card .summary-row span {
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+}
+
+.summary-card .summary-row.total {
+    padding: 15px 0;
+    margin-top: 5px;
+    border-top: 2px solid #e9ecef;
+    font-weight: 700;
+}
+
+.summary-card .summary-row.total span {
+    font-size: 16px;
+    color: #DB4444;
+}
+
+/* Place Order Button */
+.checkout-button-link {
+    text-decoration: none;
+}
+
+.place-order-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px 20px;
+    background: linear-gradient(135deg, #DB4444 0%, #c41f1f 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(219, 68, 68, 0.2);
+}
+
+.place-order-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(219, 68, 68, 0.3);
+}
+
+.place-order-btn:active {
+    transform: translateY(-1px);
+}
+
+.btn-amount {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.95;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .checkout-wrapper {
+        padding: 20px 15px;
+    }
+    
+    .checkout-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .checkout-title {
+        font-size: 28px;
+    }
+    
+    .checkout-products {
+        padding: 20px;
+    }
+    
+    .product-item {
+        padding: 15px;
+        gap: 12px;
+    }
+    
+    .item-image {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .product-name {
+        font-size: 14px;
+    }
+    
+    .checkout-section {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .checkout-wrapper {
+        padding: 15px 10px;
+    }
+    
+    .checkout-title {
+        font-size: 24px;
+    }
+    
+    .checkout-header {
+        margin-bottom: 30px;
+    }
+    
+    .checkout-products {
+        padding: 15px;
+    }
+    
+    .products-list {
+        gap: 10px;
+    }
+    
+    .product-item {
+        padding: 12px;
+        gap: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .item-image {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .product-details {
+        width: 100%;
+        order: 2;
+    }
+    
+    .product-image {
+        order: 1;
+    }
+    
+    .remove-item-btn {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        width: 35px;
+        height: 35px;
+        order: 3;
+    }
+    
+    .checkout-section {
+        padding: 12px;
+    }
+    
+    .place-order-btn {
+        font-size: 14px;
+        padding: 12px 15px;
+    }
+    
+    .checkout-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .checkout-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+}

@@ -20,36 +20,42 @@ const Shop = (props) => {
       img: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400",
       title: "Atomic Habits",
       price: 450,
+      qty: 1,
     },
     {
       id: "newproducts002ebook",
       img: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=400",
       title: "Rich Dad Poor Dad",
       price: 500,
+      qty: 1,
     },
     {
       id: "newproducts003ebook",
       img: "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=400",
       title: "The Psychology of Money",
       price: 550,
+      qty: 1,
     },
     {
       id: "newproducts004ebook",
       img: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=400",
       title: "Think and Grow Rich",
       price: 600,
+      qty: 1,
     },
     {
       id: "newproducts005ebook",
       img: "https://template-kit.ancorathemes.com/blog-for-life/wp-content/uploads/sites/13/2020/06/the-tonik-4x1AyuOTIgo-unsplash-450x450.jpg?w=400",
       title: "Deep Work",
       price: 650,
+      qty: 1,
     },
     {
       id: "newproducts006ebook",
       img: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=400",
       title: "Start With Why",
       price: 700,
+      qty: 1,
     },
   ];
   // ==========================================================//
